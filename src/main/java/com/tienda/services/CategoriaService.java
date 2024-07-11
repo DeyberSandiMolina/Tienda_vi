@@ -16,4 +16,11 @@ public interface CategoriaService {
     arrayList de objetos categoria. 
     Solo los activos*/
     public List<Categoria> getCategorias(boolean activos);
+    
+    
+    public Categoria getCategoria(Categoria categoria);
+    
+    public void delete(Categoria categoria);
+    
+    public void save(Categoria categoria);
 }
