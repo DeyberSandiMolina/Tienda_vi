@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- 
-esta es mi primera pagina dinamica -->
+esta es mi primera pagina listado productos -->
 <html xmlns="https://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
     <head th:replace="~{layout/plantilla :: head}"/>
@@ -11,9 +11,10 @@ esta es mi primera pagina dinamica -->
     <body>
         
         <header th:replace="~{layout/plantilla :: header}"/>
-            
+        
+        <section th:replace="~{pruebas/fragmentos :: consultas}"/>     
         <section th:replace="~{pruebas/fragmentos :: tarjetas}"/>
-               
+        
         <footer th:replace="~{layout/plantilla :: footer}"/>
         
     </body>

@@ -23,4 +23,11 @@ public interface ProductoService {
     public void delete(Producto producto);
     
     public void save(Producto producto);
+    
+    public List<Producto> consulta1(double precioInf, double precioSup);
+
+    public List<Producto> consulta2(double precioInf, double precioSup);
+
+    public List<Producto> consulta3(double precioInf, double precioSup);
+
 }
