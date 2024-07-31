@@ -6,32 +6,33 @@ package com.tienda.domain;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.io.Serializable;
+import java.util.List;
 /**
  *
  * @author fabia
  */
 @Data
 @Entity
-@Table(name="producto")
-public class Producto implements Serializable{
+@Table(name="usuario")
+public class Usuario implements Serializable{
     
     private static final long serialVersionUID= 11;
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id_producto")
-    private long idProducto;
-    //private long idCategoria;
-    private String descripcion;
-    private String detalle;
-    private double precio;
-    private int existencias;
-      
+    @Column(name="id_usuario")
+    private long idUsuario;
+    private String username;
+    private String password;
+    private String nombre;
+    private String apellidos;
+    private String correo;
+    private String telefono;
     //@Column(name="ruta_imagen")
     private String rutaImagen;
     private boolean activo;
     
-    @ManyToOne
-    @JoinColumn(name="id_categoria")
-    private Usuario categoria;
+    @OneToMany
+    @JoinColumn(name="id_usuario")
+    private List<Rol> roles;
 }
